@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Midule 4 Week 1 Assignment</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.11/vue.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="header">
+        <h1>Fresh Food To Go</h1>
+      </div>
+      <div id="vue">
+          <selection></selection>
+        <food-catalog
+          v-for="item in catalog"
+          v-bind:catalog-items="item"
+        ></food-catalog>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var catalog = new Vue({
+        el: "#vue",
+        data: {
+          catalog: [
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Spaghetti_aglio%2C_olio_e_peperoncino_%2816284859030%29.jpg",
+              title: "Pasta",
+              desc: "Healthy Pasta",
+              alt: "Healthy Pasta",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Jacques_Lameloise%2C_escab%C3%A8che_d%27%C3%A9crevisses_sur_gaspacho_d%27asperge_et_cresson.jpg",
+              title: "Red Crab",
+              desc: "Fresh from Alaska",
+              alt: "Red Crab fresh from Alaska",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/0/02/Breakfast_at_Irving_Street_Kitchen.jpg",
+              title: "Breakfast Special",
+              desc: "Good for the Soul",
+              alt: "Breakfast for the Soul",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Seafood_linguine.jpg",
+              title: "Sea Shells Mix",
+              desc: "For the shell lovers",
+              alt: "Seafood Linguine",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Various_kebab.jpg",
+              title: "Ultimate Kebab",
+              desc: "The best from Middle East",
+              alt: "Middle East Various Kebab",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Chicken_steak_with_pepper_sauce.jpg",
+              title: "Chicken Steak",
+              desc: "Grilled to Perfection",
+              alt: "Chicken Steak with Pepper Sauce",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/1/1a/.Filet_mignon_et_foie_gras_au_muscat_de_Beaumes-de-Venise%2C_Pastis_Bistro%2C_Palo_Alto.jpg",
+              title: "Fillet Mignon",
+              desc: "Juicy steak served with potatoes au gratin",
+              alt: "Juicy Fillet Mignon",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/4/48/Dishes_at_Bistro_C%2C_Hastings_Street%2C_Noosa_Heads%2C_Queensland_02.jpg",
+              title: "Bistro Brunch",
+              desc: "A touch of Australia",
+              alt: "Australian Bistro Brunch",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/3/32/2011-04-09_17.02.43%2C_Whispers_Cafe_and_Creperie%2C_Belmont%2C_CA_%285982715933%29.jpg",
+              title: "California Crepe",
+              desc: "Stuffed with grilled shrimp",
+              alt: "Crepe stuffed with grilled shirmp",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Hamburguesa_de_carne.jpg",
+              title: "Top Burger",
+              desc: "The tallest hamburger from Peru",
+              alt: "Tallest burger from Peru",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/3/33/Round_Table_chicken_%26_garlic_pizza.JPG",
+              title: "Chicken Garlic Pizza",
+              desc: "Our special Pizza",
+              alt: "Chicken Garlic Pizza",
+            },
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Stir_Fry_Wok_-_Free_For_Commercial_Use_-_FFCU_%2827159057131%29.jpg",
+              title: "Wok Away Healthy",
+              desc: "Healthy blend of noodles and veggies",
+              alt: "Healthy stirfry noodels and veggies",
+            },
+          ],
+        },
+        components: {
+          foodCatalog: {
+            props: ["catalogItems"],
+            template: `
+                 <div class='card'>
+                    <img class='card-img-top' v-bind:src='catalogItems.url'>
+                     <div class='card-body'>
+                        <h5 class='card-title'> {{catalogItems.title}}</h5>
+                        <p class='card-text'>{{catalogItems.desc}}</p>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>`,
+          },
+          selection: {
+              template: "<h2> Selections </h2>"
+          }
+        },
+
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  </body>
+</html>

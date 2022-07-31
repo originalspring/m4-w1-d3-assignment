@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Bitter;
+}
+
+body {
+  max-width: 80em;
+}
+
+body .header {
+  height: 10rem;
+  background: -webkit-gradient(linear, left top, right top, from(#3a6073), color-stop(#16222a), to(#16222a));
+  background: linear-gradient(90deg, #3a6073, #16222a, #16222a);
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+  font-size: 18px;
+}
+
+body .header h1 {
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+body h2 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+body #vue {
+  margin: 0 10rem;
+  text-align: center;
+}
+
+body #vue .card {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  width: 13rem;
+  border: none;
+  padding: 0 1rem;
+  height: 20rem;
+}
+
+body #vue .card .card-img-top {
+  height: 12rem;
+  width: 13rem;
+}
+
+body #vue .card .card-body h5 {
+  font-family: Bitter;
+  font-size: medium;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+body #vue .card .card-body p {
+  font-family: FontAwesome;
+  padding: 0;
+  margin: 0;
+  font-size: small;
+}
+
+body #vue .card .card-body button {
+  font-size: medium;
+}
+/*# sourceMappingURL=styles.css.map */

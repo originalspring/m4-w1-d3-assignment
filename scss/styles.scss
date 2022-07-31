@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
+
+//Colors:
+
+$color1: rgb(255, 255, 255);
+$color2: rgb(0, 0, 0);
+$color3: rgba(0, 0, 0, 0.5);
+$color4: rgba(0, 0, 0, 0.24);
+$color5: rgb(22, 34, 42);
+$color6: rgb(58, 96, 115);
+
+//Fonts:
+$fontBitter: Bitter;
+$fontAwesome: FontAwesome;
+
+//Width
+$max-width: 80em;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontBitter;
+}
+
+body {
+  max-width: $max-width;
+  .header {
+    height: 10rem;
+    background: linear-gradient(90deg, $color6, $color5, $color5);
+    color: $color1;
+    text-align: center;
+    padding: 4rem 0;
+    font-size: 18px;
+    h1 {
+      font-weight: bolder;
+      font-size: 35px;
+    }
+  }
+  h2 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+  }
+  #vue {
+    margin: 0 10rem;
+    text-align: center;
+    .card {
+      display: inline-flex;
+      text-align: center;
+      width: 13rem;
+      border: none;
+      padding: 0 1rem;
+      height: 20rem;
+      .card-img-top {
+        height: 12rem;
+        width: 13rem;
+      }
+      .card-body {
+        h5 {
+          font-family: $fontBitter;
+          font-size: medium;
+          font-weight: bold;
+          padding: 0;
+          margin: 0;
+        }
+        p {
+          font-family: $fontAwesome;
+          padding: 0;
+          margin: 0;
+          font-size: small;
+        }
+        button {
+          font-size: medium;
+        }
+      }
+    }
+  }
+}
